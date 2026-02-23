@@ -1,0 +1,151 @@
+[OPERATING SYSTEM LAB]
+Course Code: CSE12156 | Adamas University
+Session: Assignment 1 - Ubuntu & Shell Basics
+
+================================================================================
+QUESTION 1: Define shell and kernel in Ubuntu in brief.
+================================================================================
+
+Answer: 
+Kernel: The kernel is the core of the operating system. It directly interacts 
+with hardware such as CPU, memory, disk, and devices. It manages processes, 
+memory, device drivers, and system calls. 
+In short: Kernel = brain + hardware manager.
+
+Shell: The shell is the user interface to the kernel. It takes commands 
+from the user (like ls, cd, mkdir) and asks the kernel to execute them. 
+Common shells in Ubuntu include bash, zsh, and fish. 
+In short: Shell = command interpreter between user and kernel.
+
+Memory Trick: User → Shell → Kernel → Hardware
+
+================================================================================
+QUESTION 2: Draw figure to depict the relation between shell and kernel.
+================================================================================
+
+Answer: 
+   +----------+
+   |   User   |
+   +----------+
+         |
+         v
+   +----------+
+   |  Shell   |
+   | (bash)   |
+   +----------+
+         |
+         v
+   +----------+
+   |  Kernel  |
+   +----------+
+         |
+         v
+   +----------+
+   | Hardware |
+   | CPU, RAM |
+   | Disk etc.|
+   +----------+
+
+One-line explanation: Shell acts as an interface between the User and Kernel, 
+and the Kernel interacts directly with Hardware.
+
+Shortcut: User → Shell → Kernel → Hardware
+
+================================================================================
+QUESTION 3: What is a shell script?
+================================================================================
+
+Answer: 
+A shell script is a text file that contains a sequence of shell commands 
+written to automate tasks in Linux/Ubuntu. It is executed by the shell 
+(like bash) and is used to perform repetitive tasks automatically. 
+Shell script files usually have a .sh extension.
+
+Example: 
+#!/bin/bash 
+echo "Hello, Ubuntu!"
+
+One-line definition: A shell script is a file containing a set of shell 
+commands that are executed sequentially by the shell.
+
+================================================================================
+QUESTION 4: How to create BTech -> CSE -> SecB -> .txt structure?
+================================================================================
+
+Answer: 
+Required structure: 
+BTech/ 
+└── CSE/ 
+    └── SecB/ 
+        └── yourname.txt
+
+Commands: 
+mkdir -p BTech/CSE/SecB 
+cd BTech/CSE/SecB 
+touch Babin.txt
+
+(Optional) Write name inside file: 
+echo "Babin" > Babin.txt
+
+Check result: 
+ls 
+cat Babin.txt
+
+One-line explanation: mkdir -p creates nested directories, touch creates 
+a file, and echo writes content into it.
+
+================================================================================
+QUESTION 5: How to create a file named prog.sh in Ubuntu?
+================================================================================
+
+Answer: 
+Method 1: touch prog.sh
+Method 2: nano prog.sh
+Method 3: vi prog.sh
+
+Verify: ls
+(Optional) Make executable: chmod +x prog.sh
+
+One-line explanation: A shell script file is created using touch or an editor 
+and saved with .sh extension.
+
+================================================================================
+QUESTION 6: Write a shell script to print "Hello World".
+================================================================================
+
+Answer: 
+#!/bin/bash 
+echo "Hello World"
+
+Steps to run: 
+chmod +x prog.sh 
+./prog.sh
+
+Output: 
+Hello World
+
+Explanation: #!/bin/bash specifies Bash shell and echo prints output.
+
+================================================================================
+QUESTION 7: Full process using vi editor to create and run First.sh.
+================================================================================
+
+Answer: 
+1. vi First.sh 
+2. Press i (insert mode) 
+3. Type:
+   #!/bin/bash 
+   echo "Hello World"
+4. Press Esc 
+5. Type :wq (save and quit) 
+6. Run: sh First.sh
+
+Output: 
+Hello World
+
+Exam-friendly summary: The shell script is created using vi, edited in 
+insert mode, saved using :wq, and executed using sh.
+
+================================================================================
+END OF ASSIGNMENT
+================================================================================
