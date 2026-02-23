@@ -1,0 +1,143 @@
+[OPERATING SYSTEM LAB]
+Course Code: CSE12156 | Adamas University
+Session: Assignment 3 - Shell Scripting (Loops and Mathematical Logic)
+
+================================================================================
+QUESTION 1: Write a shell script to find the factorial of a number.
+================================================================================
+
+Step-by-Step Process in Ubuntu:
+1. Create the shell script file: vi factorial.sh
+2. Press i (Insert mode starts)
+3. Type the following code:
+
+#!/bin/bash
+echo "Enter a number:"
+read num
+
+fact=1
+i=1
+
+if [ $num -eq 0 ]
+then
+    echo "Factorial = 1"
+else
+    while [ $i -le $num ]
+    do
+        fact=$((fact * i))
+        i=$((i + 1))
+    done
+    echo "Factorial = $fact"
+fi
+
+4. Press Esc (Exit insert mode)
+5. Save and quit by typing: :wq
+6. Run the script: bash factorial.sh
+
+Sample Output:
+Case 1: Enter a number: 5 -> Factorial = 120
+Case 2: Enter a number: 0 -> Factorial = 1
+
+One-line exam explanation: The script calculates factorial using a loop and handles zero separately since factorial of 0 is always 1.
+
+================================================================================
+QUESTION 2: Write a shell script to check whether a number is prime.
+================================================================================
+
+Step-by-Step Process in Ubuntu:
+1. Create file: vi prime.sh
+2. Press i and type:
+
+#!/bin/bash
+echo "Enter a number:"
+read num
+
+if [ $num -le 1 ]
+then
+    echo "$num is NOT a Prime number"
+    exit
+fi
+
+for (( i=2; i<=num/2; i++ ))
+do
+    if [ $((num % i)) -eq 0 ]
+    then
+        echo "$num is NOT a Prime number"
+        exit
+    fi
+done
+
+echo "$num is a Prime number"
+
+3. Save using :wq and run: bash prime.sh
+
+One-line explanation: The script checks divisibility from 2 up to n/2 using a for loop.
+
+================================================================================
+QUESTION 3: Write a shell script to print Fibonacci series up to a given range.
+================================================================================
+
+Step-by-Step Process in Ubuntu:
+1. Create file: vi fibo.sh
+2. Press i and type:
+
+#!/bin/bash
+echo "Enter range:"
+read n
+
+a=0
+b=1
+count=0
+
+echo "Fibonacci Series:"
+while [ $count -lt $n ]
+do
+    echo -n "$a "
+    sum=$((a + b))
+    a=$b
+    b=$sum
+    count=$((count + 1))
+done
+echo
+
+3. Save using :wq and run: bash fibo.sh
+
+One-line explanation: The script generates Fibonacci numbers by summing the previous two numbers iteratively.
+
+================================================================================
+QUESTION 4: Write a shell script to check whether a given number is palindrome.
+================================================================================
+
+Step-by-Step Process in Ubuntu:
+1. Create file: vi palin.sh
+2. Press i and type:
+
+#!/bin/bash
+echo "Enter a number:"
+read num
+
+temp=$num
+rev=0
+
+while [ $temp -gt 0 ]
+do
+    rem=$((temp % 10))
+    rev=$((rev * 10 + rem))
+    temp=$((temp / 10))
+done
+
+if [ $num -eq $rev ]
+then
+    echo "Palindrome"
+else
+    echo "Not Palindrome"
+fi
+
+3. Save using :wq and run: bash palin.sh
+
+One-line explanation: The script reverses the number using a loop and compares it with the original.
+
+
+================================================================================
+END OF ASSIGNMENT
+================================================================================
