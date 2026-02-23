@@ -11,7 +11,6 @@ Step-by-Step Process in Ubuntu:
 2. Press i (Insert mode starts)
 3. Type the following code:
 
-#!/bin/bash
 echo "Enter a number:"
 read num
 
@@ -31,8 +30,8 @@ else
 fi
 
 4. Press Esc (Exit insert mode)
-5. Save and quit by typing: :wq
-6. Run the script: bash factorial.sh
+5. Save and quit by typing: ":wq"
+6. Run the script: sh factorial.sh
 
 Sample Output:
 Case 1: Enter a number: 5 -> Factorial = 120
@@ -48,7 +47,6 @@ Step-by-Step Process in Ubuntu:
 1. Create file: vi prime.sh
 2. Press i and type:
 
-#!/bin/bash
 echo "Enter a number:"
 read num
 
@@ -69,7 +67,7 @@ done
 
 echo "$num is a Prime number"
 
-3. Save using :wq and run: bash prime.sh
+3. Save using ":wq" and run: "bash prime.sh"  (Sometimes "sh" is not working in "for" loop cases therefore using "bash" can resolve this issue.)
 
 One-line explanation: The script checks divisibility from 2 up to n/2 using a for loop.
 
@@ -81,7 +79,6 @@ Step-by-Step Process in Ubuntu:
 1. Create file: vi fibo.sh
 2. Press i and type:
 
-#!/bin/bash
 echo "Enter range:"
 read n
 
@@ -100,7 +97,7 @@ do
 done
 echo
 
-3. Save using :wq and run: bash fibo.sh
+3. Save using ":wq" and run: "sh fibo.sh"
 
 One-line explanation: The script generates Fibonacci numbers by summing the previous two numbers iteratively.
 
@@ -112,7 +109,6 @@ Step-by-Step Process in Ubuntu:
 1. Create file: vi palin.sh
 2. Press i and type:
 
-#!/bin/bash
 echo "Enter a number:"
 read num
 
@@ -133,7 +129,7 @@ else
     echo "Not Palindrome"
 fi
 
-3. Save using :wq and run: bash palin.sh
+3. Save using ":wq" and run: "sh palin.sh"
 
 One-line explanation: The script reverses the number using a loop and compares it with the original.
 
