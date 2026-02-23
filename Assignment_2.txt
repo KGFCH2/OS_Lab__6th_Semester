@@ -6,7 +6,11 @@ Session: Assignment 2 - Basic Shell Scripting (Control Flow)
 QUESTION 1: Write shell script to find sum, diff, mod of two numbers.
 ================================================================================
 
-SCRIPT:
+Step-by-Step Process in Ubuntu:
+1. Create the shell script file: vi calc.sh
+2. Press i (Insert mode starts)
+3. Type the following code:
+
 echo "Enter first number:"
 read a
 echo "Enter second number:"
@@ -18,20 +22,28 @@ echo "Sum = $sum"
 echo "Difference = $diff"
 echo "Modulus = $mod"
 
-OUTPUT:
-sh calc.sh     // Press Enter
+4. Press Esc (Exit insert mode)
+5. Save and quit by typing: ":wq"
+6. Run the script: sh calc.sh
 
+Sample Output:
 Enter first number: 7
 Enter second number: 4
 Sum = 11
 Difference = 3
 Modulus = 3
 
+One-line explanation: The script takes two numbers as input and performs basic arithmetic operations using $(( )) syntax.
+
 ================================================================================
 QUESTION 2: Write shell script to find greater among two numbers.
 ================================================================================
 
-SCRIPT:
+Step-by-Step Process in Ubuntu:
+1. Create the shell script file: vi greater.sh
+2. Press i (Insert mode starts)
+3. Type the following code:
+
 echo "Enter first number:"
 read a
 echo "Enter second number:"
@@ -47,18 +59,26 @@ else
     echo "Both numbers are equal"
 fi
 
-OUTPUT:
-sh greater.sh     // Press Enter
+4. Press Esc (Exit insert mode)
+5. Save and quit by typing: ":wq"
+6. Run the script: sh greater.sh
 
+Sample Output:
 Enter first number: 3
 Enter second number: 6
 6 is greater than 3
+
+One-line explanation: The script uses if-elif-else conditions with relational operators like -gt and -lt to compare two numbers.
 
 ================================================================================
 QUESTION 3: Write a shell script to check if two strings are identical.
 ================================================================================
 
-SCRIPT:
+Step-by-Step Process in Ubuntu:
+1. Create the shell script file: vi string.sh
+2. Press i (Insert mode starts)
+3. Type the following code:
+
 echo "Enter first string:"
 read str1
 echo "Enter second string:"
@@ -71,18 +91,26 @@ else
     echo "Strings are not same"
 fi
 
-OUTPUT:
-sh string.sh     // Press Enter
+4. Press Esc (Exit insert mode)
+5. Save and quit by typing: ":wq"
+6. Run the script: sh string.sh
 
+Sample Output:
 Enter first string: Babin
 Enter second string: Debasmita
 Strings are not same
+
+One-line explanation: The script compares two strings using the = operator inside a conditional block.
 
 ================================================================================
 QUESTION 4: Write shell script to check whether a year is a Leap Year.
 ================================================================================
 
-SCRIPT:
+Step-by-Step Process in Ubuntu:
+1. Create the shell script file: vi leap.sh
+2. Press i (Insert mode starts)
+3. Type the following code:
+
 echo "Enter a year:"
 read year
 
@@ -99,11 +127,15 @@ else
     echo "$year is NOT a Leap Year"
 fi
 
-OUTPUT:
-sh leap.sh     // Press Enter
+4. Press Esc (Exit insert mode)
+5. Save and quit by typing: ":wq"
+6. Run the script: sh leap.sh
 
+Sample Output:
 Enter a year: 2026
 2026 is NOT a Leap Year
+
+One-line explanation: The script checks leap year conditions using the modulus operator and nested/logical conditions.
 
 ================================================================================
 QUESTION 5: Find the process with the lowest execution time among 4 processes.
@@ -142,8 +174,18 @@ echo "Task: $min_task"
 echo "Execution Time: $min"
 
 4. Press Esc (Exit insert mode)
-5. Type :wq and press Enter (Save and Quit)
-6. Make file executable: sh process.sh
+5. Save and quit by typing: ":wq"
+6. Run the script: sh process.sh
+
+Sample Output:
+Enter Process Number: 1
+Enter Task Name: TaskA
+Enter Execution Time: 40
+...
+Process with Lowest Execution Time:
+Process Number: 2
+Task: TaskB
+Execution Time: 20
 
 One-line explanation: The script uses a loop to input 4 process records and compares execution time using a conditional statement to find the minimum.
 
@@ -167,8 +209,12 @@ else
 fi
 
 4. Press Esc (Exit insert mode)
-5. Type :wq and press Enter (Save and Quit)
-6. Make file executable: sh filecheck.sh
+5. Save and quit by typing: ":wq"
+6. Run the script: sh filecheck.sh
+
+Sample Output:
+Enter file name: calc.sh
+File exists.
 
 One-line explanation: The script checks file existence using the -f file test operator inside an if condition.
 
