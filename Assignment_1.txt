@@ -114,23 +114,6 @@ QUESTION 6: Write a shell script to print "Hello World".
 ================================================================================
 
 Answer: 
-#!/bin/bash 
-echo "Hello World"
-
-Steps to run: 
-chmod +x prog.sh 
-./prog.sh
-
-Output: 
-Hello World
-
-Explanation: #!/bin/bash specifies Bash shell and echo prints output.
-
-================================================================================
-QUESTION 7: Full process using vi editor to create and run First.sh.
-================================================================================
-
-Answer: 
 1. vi First.sh 
 2. Press i (insert mode) 
 3. Type:
@@ -142,6 +125,8 @@ Answer:
 
 Output: 
 Hello World
+
+Explanation: #!/bin/bash specifies Bash shell and echo prints output.
 
 Exam-friendly summary: The shell script is created using vi, edited in 
 insert mode, saved using :wq, and executed using sh.
