@@ -1,0 +1,177 @@
+[OPERATING SYSTEM LAB]
+Course Code: CSE12156 | Adamas University
+Session: Assignment 2 - Basic Shell Scripting (Control Flow)
+
+================================================================================
+QUESTION 1: Write shell script to find sum, diff, mod of two numbers.
+================================================================================
+
+SCRIPT:
+echo "Enter first number:"
+read a
+echo "Enter second number:"
+read b
+sum=$((a+b))
+diff=$((a-b))
+mod=$((a%b))
+echo "Sum = $sum"
+echo "Difference = $diff"
+echo "Modulus = $mod"
+
+OUTPUT:
+babin@LAPTOP-BABIN-123:~$ sh calc.sh
+Enter first number: 7
+Enter second number: 4
+Sum = 11
+Difference = 3
+Modulus = 3
+
+================================================================================
+QUESTION 2: Write shell script to find greater among two numbers.
+================================================================================
+
+SCRIPT:
+echo "Enter first number:"
+read a
+echo "Enter second number:"
+read b
+
+if [ $a -gt $b ]
+then
+    echo "$a is greater than $b"
+elif [ $a -lt $b ]
+then
+    echo "$b is greater than $a"
+else
+    echo "Both numbers are equal"
+fi
+
+OUTPUT:
+babin@LAPTOP-BABIN-123:~$ sh greater.sh
+Enter first number: 3
+Enter second number: 6
+6 is greater than 3
+
+================================================================================
+QUESTION 3: Write a shell script to check if two strings are identical.
+================================================================================
+
+SCRIPT:
+echo "Enter first string:"
+read str1
+echo "Enter second string:"
+read str2
+
+if [ "$str1" = "$str2" ]
+then
+    echo "Strings are same"
+else
+    echo "Strings are not same"
+fi
+
+OUTPUT:
+babin@LAPTOP-BABIN-123:~$ sh string.sh
+Enter first string: Babin
+Enter second string: Debasmita
+Strings are not same
+
+================================================================================
+QUESTION 4: Write shell script to check whether a year is a Leap Year.
+================================================================================
+
+SCRIPT:
+echo "Enter a year:"
+read year
+
+if [ $((year % 400)) -eq 0 ]
+then
+    echo "$year is a Leap Year"
+elif [ $((year % 100)) -eq 0 ]
+then
+    echo "$year is NOT a Leap Year"
+elif [ $((year % 4)) -eq 0 ]
+then
+    echo "$year is a Leap Year"
+else
+    echo "$year is NOT a Leap Year"
+fi
+
+OUTPUT:
+babin@LAPTOP-BABIN-123:~$ sh leap.sh
+Enter a year: 2026
+2026 is NOT a Leap Year
+
+================================================================================
+QUESTION 5: Find the process with the lowest execution time among 4 processes.
+================================================================================
+
+Step-by-Step Process in Ubuntu:
+1. Create the shell script file: vi process.sh
+2. Press i (Insert mode starts)
+3. Type the following code:
+
+#!/bin/bash
+min=999999
+min_pno=""
+min_task=""
+
+for i in 1 2 3 4
+do
+    echo "Enter Process Number:"
+    read pno
+    echo "Enter Task Name:"
+    read task
+    echo "Enter Execution Time:"
+    read exec
+
+    if [ $exec -lt $min ]
+    then
+        min=$exec
+        min_pno=$pno
+        min_task=$task
+    fi
+done
+
+echo "------------------------"
+echo "Process with Lowest Execution Time:"
+echo "Process Number: $min_pno"
+echo "Task: $min_task"
+echo "Execution Time: $min"
+
+4. Press Esc (Exit insert mode)
+5. Type :wq and press Enter (Save and Quit)
+6. Make file executable: chmod +x process.sh
+7. Run the script: ./process.sh
+
+One-line explanation: The script uses a loop to input 4 process records and compares execution time using a conditional statement to find the minimum.
+
+================================================================================
+QUESTION 6: Write a shell script to find whether a file exists or not.
+================================================================================
+
+Step-by-Step Process in Ubuntu:
+1. Create the shell script file: vi filecheck.sh
+2. Press i (Insert mode starts)
+3. Type the following code:
+
+#!/bin/bash
+echo "Enter file name:"
+read fname
+
+if [ -f "$fname" ]
+then
+    echo "File exists."
+else
+    echo "File does not exist."
+fi
+
+4. Press Esc (Exit insert mode)
+5. Type :wq and press Enter (Save and Quit)
+6. Make file executable: chmod +x filecheck.sh
+7. Run the script: ./filecheck.sh
+
+One-line explanation: The script checks file existence using the -f file test operator inside an if condition.
+
+================================================================================
+END OF ASSIGNMENT
+================================================================================
