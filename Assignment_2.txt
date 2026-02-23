@@ -19,7 +19,8 @@ echo "Difference = $diff"
 echo "Modulus = $mod"
 
 OUTPUT:
-babin@LAPTOP-BABIN-123:~$ sh calc.sh
+sh calc.sh     // Press Enter
+
 Enter first number: 7
 Enter second number: 4
 Sum = 11
@@ -47,7 +48,8 @@ else
 fi
 
 OUTPUT:
-babin@LAPTOP-BABIN-123:~$ sh greater.sh
+sh greater.sh     // Press Enter
+
 Enter first number: 3
 Enter second number: 6
 6 is greater than 3
@@ -70,7 +72,8 @@ else
 fi
 
 OUTPUT:
-babin@LAPTOP-BABIN-123:~$ sh string.sh
+sh string.sh     // Press Enter
+
 Enter first string: Babin
 Enter second string: Debasmita
 Strings are not same
@@ -97,7 +100,8 @@ else
 fi
 
 OUTPUT:
-babin@LAPTOP-BABIN-123:~$ sh leap.sh
+sh leap.sh     // Press Enter
+
 Enter a year: 2026
 2026 is NOT a Leap Year
 
@@ -110,7 +114,6 @@ Step-by-Step Process in Ubuntu:
 2. Press i (Insert mode starts)
 3. Type the following code:
 
-#!/bin/bash
 min=999999
 min_pno=""
 min_task=""
@@ -140,8 +143,7 @@ echo "Execution Time: $min"
 
 4. Press Esc (Exit insert mode)
 5. Type :wq and press Enter (Save and Quit)
-6. Make file executable: chmod +x process.sh
-7. Run the script: ./process.sh
+6. Make file executable: sh process.sh
 
 One-line explanation: The script uses a loop to input 4 process records and compares execution time using a conditional statement to find the minimum.
 
@@ -154,7 +156,6 @@ Step-by-Step Process in Ubuntu:
 2. Press i (Insert mode starts)
 3. Type the following code:
 
-#!/bin/bash
 echo "Enter file name:"
 read fname
 
@@ -167,8 +168,7 @@ fi
 
 4. Press Esc (Exit insert mode)
 5. Type :wq and press Enter (Save and Quit)
-6. Make file executable: chmod +x filecheck.sh
-7. Run the script: ./filecheck.sh
+6. Make file executable: sh filecheck.sh
 
 One-line explanation: The script checks file existence using the -f file test operator inside an if condition.
 
