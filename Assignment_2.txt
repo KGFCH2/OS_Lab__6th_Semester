@@ -175,7 +175,7 @@ echo "Execution Time: $min"
 
 4. Press Esc (Exit insert mode)
 5. Save and quit by typing: ":wq"
-6. Run the script: sh process.sh
+6. Run the script: bash process.sh
 
 Sample Output:
 Enter Process Number: 1
